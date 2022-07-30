@@ -8,6 +8,7 @@ export const getTelegramConfig = (
   if (!token) {
     throw new Error('TELEGRAM_TOKEN не задан');
   }
+  console.log(configService.get('CHAT_ID'));
   return {
     token,
     chatId: configService.get('CHAT_ID') ?? '',

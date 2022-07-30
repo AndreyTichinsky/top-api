@@ -4,10 +4,7 @@ import { ITelegramModuleAsyncOptions } from './telegram.interface';
 import { TelegramService } from './telegram.service';
 
 @Global()
-@Module({
-  providers: [TelegramService],
-  exports: [TelegramService],
-})
+@Module({})
 export class TelegramModule {
   static forRootAsync(options: ITelegramModuleAsyncOptions): DynamicModule {
     const asyncOptions = this.createAsyncOptionsProvider(options);
